@@ -7,6 +7,7 @@ import routes from "./src/routes/postsRoutes.js";
 // Cria uma instância do servidor Express,
 // permitindo configurar rotas e middleware.
 const app = express();
+app.use(express.static("uploads"));
 routes(app);
 
 // Define a porta do servidor a partir de uma variável de ambiente
